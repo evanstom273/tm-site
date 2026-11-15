@@ -1,1 +1,8 @@
+node_modules/
+dist/
+.wrangler/
 build/
+worker-configuration.d.ts
+*.tsbuildinfo
+__pycache__/
+.dev.vars*

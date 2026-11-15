@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tm-site",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-01",
+  "observability": { "enabled": true },
+  // The React app is served as static assets; only /api/* runs the Worker.
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "tmidb",
+      "database_id": "a7ce26f6-b05b-4d82-a03c-9967b6ba79e4"
+    }
+  ]
+}
